@@ -2,35 +2,26 @@
 
 StudyHub is a mobile-friendly platform for students to privately organize course materials in one place. The MVP focuses on course folders, document uploads, external resource links, tags, search, and saved resources.
 
-> **Repository status:** This repository currently contains the product and architecture baseline. The application implementation has not yet been added.
+## Current status
 
-## MVP scope
+A responsive Next.js landing page is included as the initial web application. The authenticated student dashboard, API, database, authentication, and file storage are not implemented yet; the screens shown in the page are illustrative only.
 
-- Student registration, sign-in, sign-out, and password recovery
-- Private course management
-- Upload and manage supported documents
-- Save and manage external resource links
-- Search resources by title, course, and keyword
-- Organize resources with tags and save resources for later
-- Responsive mobile and desktop experience
+## Run locally
 
-AI tutoring, generated questions, video delivery, discussion forums, advanced analytics, subscriptions, institutional integrations, and offline synchronization are deferred beyond the MVP.
+Requires Node.js 20 or newer.
 
-## Proposed technology baseline
+```bash
+npm install
+npm run dev
+```
 
-- **Web:** React with Next.js and Tailwind CSS
-- **API:** NestJS modular monolith with versioned REST endpoints
-- **Database:** Managed PostgreSQL
-- **Authentication:** Supabase Auth or an equivalent managed provider (decision pending)
-- **File storage:** Private S3-compatible object storage with short-lived signed URLs
-- **Search:** PostgreSQL full-text search for the MVP
+Open http://localhost:3000.
 
-See [Architecture](docs/architecture.md) and the [Implementation Plan](docs/implementation-plan.md) for additional detail and open decisions.
+## Deploy on Vercel
 
-## Core student journey
+1. Import `Omobiya/Study-Hub` from the Vercel dashboard and select the `main` branch.
+2. Keep the framework preset as **Next.js** and the root directory as `.`.
+3. No environment variables are required for this landing page. Select **Deploy**.
+4. Subsequent commits to `main` will trigger deployments when the GitHub project is connected.
 
-`Register → Sign In → Create Course → Upload Material → Organize → Search → Open → Save`
-
-## Development status
-
-The next step is to confirm the open architecture and product decisions, then scaffold the frontend, API, database migrations, and automated checks. No application code or deployment is included in this initial baseline.
+Vercel account access is required to create the hosted project and domain. See [Architecture](docs/architecture.md) and the [Implementation Plan](docs/implementation-plan.md) for the application baseline and planned MVP work.
